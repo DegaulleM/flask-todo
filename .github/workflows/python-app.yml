@@ -27,6 +27,7 @@ jobs:
       run: |
         echo "KEY=VALUE" >>$GITHUB_OUTPUT
         python -m pip install --upgrade pip
+        pip3.10 install Flask-SQLAlchemy
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
